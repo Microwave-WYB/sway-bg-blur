@@ -61,7 +61,7 @@ def main():
     system("swaybg -i " + CACHE_DIR + "/wallpaper.png -m fill &")
     if not path.exists(BG_PATH):
         print("[!] Error: No wallpaper found in", BG_PATH)
-        print("try adding `output \"*\" bg /home/$USER/.cache/wallpaper fill` to your ~/.config/sway/config, and move your wallpaper there")
+        print("try adding `output \"*\" bg /home/$USER/.cache/wallpaper.jpg fill` to your ~/.config/sway/config, and move your wallpaper there")
         exit(1)
     if popen("diff " + BG_PATH + " " + CACHE_DIR + "/wallpaper.png").read() != "":
         # cache background
