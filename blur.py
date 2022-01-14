@@ -79,7 +79,7 @@ def main():
         if focused_window == "null\n" and blurred:
             # wait a moment maybe a window will be focused in a sec
             time.sleep(0.5)
-
+        focused_window = popen("swaymsg -t get_tree | jq '.. | select(.type?) | select(.focused==true).pid'").read()
         # if a window is focused and blurred is false, apply blur
         if focused_window != "null\n" and not blurred:
             apply_change()
