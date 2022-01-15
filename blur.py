@@ -9,6 +9,8 @@ import time
 BG_PATH = path.expanduser("~") + "/.cache/wallpaper.png"
 CACHE_DIR = path.expanduser("~") + "/.cache/bg_blur"
 
+# Check cache
+
 # Generate blurred background
 def gen_blur():
     print("[*] generating blurred backgrounds")
